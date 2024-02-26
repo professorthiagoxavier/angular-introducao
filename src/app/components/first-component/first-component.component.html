@@ -1,0 +1,17 @@
+<p>Alterar o componente</p>
+
+<p>Olá {{name}}</p>
+
+<p>Idade: {{age}}</p>
+<p>Marca: {{car.make}}</p>
+<p>Modelo: {{car.model}}</p>
+<p>Hobbie: {{hobbies[1]}}</p>
+
+<ul class="ingredient-list">
+    <li *ngFor="let hobbie of hobbies">{{ hobbie }}</li>
+</ul>
+
+
+<hr>
+<h2> Inserindo component </h2>
+<app-into-component [name]="name" [car]="car"></app-into-component>
