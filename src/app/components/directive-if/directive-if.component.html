@@ -1,0 +1,20 @@
+<p>directive-if works!</p>
+
+
+<div *ngIf="mostrar">
+    <h3>Olá Angular</h3>
+</div>
+
+<h2 *ngIf="color === 'green'" ngClass="cor-green">
+    Cor é verde
+</h2>
+<!-- O ideal é que essa condicional seja feita no component typescript, mas a diretiva também permite.-->
+
+<h2>Condicional Else</h2>
+
+<div *ngIf="color === 'green'; else elseBlock">
+    <h2>Cor é verde</h2>
+</div>
+<ng-template #elseBlock>
+    <h2>Cor não é verde</h2>
+</ng-template>

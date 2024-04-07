@@ -1,0 +1,16 @@
+<p>eventos works!</p>
+
+<button (click)="showMessage()">Clique</button>
+
+<h2>Alterar nome</h2>
+<button (click)="changeText()">Clique</button>
+<input type="text" name="nome" id="nome" />
+
+
+<h2>Alterar CSS </h2>
+<input type="button" value="Alterar" (click)="changeStyle()" />
+
+
+<h2>Mostrar ou esconder um elemento</h2>
+<input type="button" value="Mostrar/Esconder" (click)="toggleVisibility()" />
+<div *ngIf="show">Mostrar elemento</div>

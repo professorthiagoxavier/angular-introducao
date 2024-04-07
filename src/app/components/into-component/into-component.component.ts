@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class IntoComponentComponent {
   @Input() name:string = "";
-  @Input() car:any = {};
+  @Input() car:any = [];
 
   constructor() {
   }

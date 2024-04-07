@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FirstComponentComponent } from './first-component.component';
+import { DiretivaIfElseComponent } from './diretiva-if-else.component';
 
-describe('FirstComponentComponent', () => {
-  let component: FirstComponentComponent;
-  let fixture: ComponentFixture<FirstComponentComponent>;
+describe('DiretivaIfElseComponent', () => {
+  let component: DiretivaIfElseComponent;
+  let fixture: ComponentFixture<DiretivaIfElseComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [FirstComponentComponent]
+      imports: [DiretivaIfElseComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(FirstComponentComponent);
+    fixture = TestBed.createComponent(DiretivaIfElseComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

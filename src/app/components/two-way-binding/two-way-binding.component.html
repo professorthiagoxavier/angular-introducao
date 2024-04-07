@@ -1,0 +1,11 @@
+<p>two-way-binding works!</p>
+
+<form>
+
+    <input type="text" [(ngModel)]="nome" name="nome" class="form-control" placeholder="Nome">
+    <input type="submit" value="Enviar" class="btn btn-primary" />
+</form>
+
+@if(nome != ''){
+    <p>Olá {{nome}}</p>
+}
