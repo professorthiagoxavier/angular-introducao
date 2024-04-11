@@ -11,6 +11,7 @@ import { OperadorPipeComponent } from './components/operador-pipe/operador-pipe.
 import { TwoWayBindingComponent } from './components/two-way-binding/two-way-binding.component';
 import { HomeComponent } from './home/home.component';
 import { RotasComponent } from './components/rotas/rotas.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ import { RotasComponent } from './components/rotas/rotas.component';
     ListarComponent,
     OperadorPipeComponent,
   TwoWayBindingComponent,
+  NavbarComponent,
   HomeComponent, RotasComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

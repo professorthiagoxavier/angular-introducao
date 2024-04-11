@@ -1,1 +1,24 @@
-<p>cliente works!</p>
+<!-- formGroup criar um formulário reativo -->
+<form [formGroup]="clienteForm" (ngSubmit)="insert()">
+    <label>
+        Nome:
+        <input type="text" formControlName="nome">
+    </label>
+    <label>
+        Telefone:
+        <input type="text" formControlName="telefone">
+    </label>
+    <button type="submit">Submit</button>
+</form>
+
+<hr>
+
+Clientes
+<ul>
+    <!-- Percorrer a lista de clientes com o novo for do angular 17 -->
+    @for (item of clientes; track $index)
+    {
+    <li>{{item.nome}} - {{item.telefone}} <input type="button" (click)="remover(item.id)" value="remover" /></li>
+    }
+
+</ul>
