@@ -48,6 +48,7 @@ export class ClienteComponent {
       this.clienteService.add(clienteAdd);
       alert('Inserido com sucesso!')
     }
+    
   }
 
   //método para listar os clientes
