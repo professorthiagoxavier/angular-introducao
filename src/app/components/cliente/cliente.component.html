@@ -18,7 +18,10 @@ Clientes
     <!-- Percorrer a lista de clientes com o novo for do angular 17 -->
     @for (item of clientes; track $index)
     {
-    <li>{{item.nome}} - {{item.telefone}} <input type="button" (click)="remover(item.id)" value="remover" /></li>
+    <li>
+        {{item.nome}} - {{item.telefone}} <input type="button" (click)="remover(item.id)" value="remover" /> 
+        <a href="/cliente/{{item.id}}" >editar</a>
+    </li>
     }
 
 </ul>

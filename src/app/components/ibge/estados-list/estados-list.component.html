@@ -1,0 +1,24 @@
+<p>estados-list works!</p>
+
+<div class="container-fluid">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Sigla</th>
+                <th>Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of estados; track $index)
+            {
+            <tr>
+                <td>{{item.id}}</td>
+                <td>{{item.sigla}}</td>
+                <td>{{item.nome}}</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

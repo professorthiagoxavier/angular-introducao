@@ -1,0 +1,22 @@
+<!-- @if (cliente) {
+    <p>Id: {{cliente.id}}</p>
+    <p>Nome: {{cliente.nome}}</p>
+    <p>Telefone: {{cliente.telefone}}</p>
+
+} -->
+
+<form [formGroup]="clienteForm" (ngSubmit)="update()">
+    <input type="hidden" formControlName="id">
+    <label>
+        Nome:
+        <input type="text" formControlName="nome">
+    </label>
+    <label>
+        Telefone:
+        <input type="text" formControlName="telefone">
+    </label>
+    <br>
+    <p>
+        <button type="submit">Salvar</button> <a href="/cliente">Voltar</a>
+    </p>
+</form>

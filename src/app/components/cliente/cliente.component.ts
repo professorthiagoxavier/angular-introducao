@@ -26,7 +26,7 @@ export class ClienteComponent {
   }
 
   //método para gerar uma string aleatória
-  generateRandomString(length: number): string  {
+  generateRandomString(length: number): string {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     let result = '';
     const charactersLength = characters.length;
@@ -40,20 +40,24 @@ export class ClienteComponent {
   insert() {
     if (this.clienteForm.valid) {
       const clienteAdd: Cliente = {
-        id:this.generateRandomString(5),
+        id: this.generateRandomString(5),
         nome: this.clienteForm.value.nome,
         telefone: this.clienteForm.value.telefone
       };
+      this.clientes.push(clienteAdd); //adicionar um cliente na lista
       this.clienteForm.reset();
-      this.clienteService.add(clienteAdd);
+      this.clienteService.add(clienteAdd).subscribe(); //adicionar um cliente no servidor
       alert('Inserido com sucesso!')
     }
-    
   }
 
   //método para listar os clientes
+  /**
+   * Retrieves a list of clients from the server and assigns it to the 'clientes' property.
+   */
   list(): void {
-    this.clientes = this.clienteService.list();
+    //retorna uma lista de clientes do servidor e atribui à propriedade 'clientes'
+     this.clienteService.list().subscribe((clientes) => (this.clientes = clientes));
   }
 
   //método para remover um cliente
@@ -63,7 +67,8 @@ export class ClienteComponent {
 
   //método para remover um cliente
   remover(id: string): void {
-    this.clienteService.remove(id);
+    this.clientes = this.clientes.filter((c) => c.id !== id);
+    this.clienteService.remove(id).subscribe();
     alert('Removido com sucesso!')
   }
 }
