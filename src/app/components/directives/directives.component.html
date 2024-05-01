@@ -1,8 +1,3 @@
-<h2>Diretiva de estilo inline</h2>
-
-<p [ngStyle]="{'background-color': color, 'font-size': size + 'px', 'color' : 'red'}">Estilo com ngStyle</p>
-
-<hr>
 <h2>Diretiva de classe</h2>
 
 <p [ngClass]="{ 'errorClass': hasError }">Estilo com ngClass</p>
@@ -11,4 +6,19 @@
 
 <hr>
 
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
 
+<hr>
+
+<h2>Diretiva de estilo inline</h2>
+
+<p [ngStyle]="{'background-color': color, 'font-size': size + 'px', 'color' : 'red'}">Estilo com ngStyle</p>
+
+
+<h3>NgModel</h3>
+<label for="example-ngModel">[(ngModel)]:</label>
+<input [(ngModel)]="currentItem.name" id="example-ngModel">
+
+<p>Campo: {{ currentItem.name }}</p>
+<p>Uppercas: <input [ngModel]="currentItem.name" (ngModelChange)="setUppercaseName($event)" id="example-uppercase"></p>

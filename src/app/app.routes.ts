@@ -7,6 +7,7 @@ import { ClientDetailComponent } from './components/client-detail/client-detail.
 import { PokemonListComponent } from './components/pokemon-list/pokemon-list.component';
 import { EstadosListComponent } from './components/ibge/estados-list/estados-list.component';
 import { FirstComponentComponent } from './components/first-component/first-component.component';
+import { DirectivesComponent } from './components/directives/directives.component';
 
 export const routes: Routes = [
     { path: '', component: HomeComponent },
@@ -16,6 +17,8 @@ export const routes: Routes = [
     { path: 'cliente/:id', component: ClientDetailComponent },
     { path: 'pokemon', component: PokemonListComponent },
     { path: 'estados', component: EstadosListComponent },
+    { path: 'diretivas', component: DirectivesComponent },
     { path: '**', component: HomeComponent } /*Qualquer rota não encontrada será redirecionado para home */
+
 
 ];
