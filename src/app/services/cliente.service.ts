@@ -61,6 +61,9 @@ export class ClienteService {
         'Content-Type': 'application/json'
       }
     };
+
+    console.log(cliente)
+    console.log(`${this.apiUrl}/${cliente.id}`)
     return this.http.put(`${this.apiUrl}/${cliente.id}`, cliente, httpHeaders);
   }
   

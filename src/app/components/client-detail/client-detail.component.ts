@@ -50,12 +50,10 @@ export class ClientDetailComponent {
   update(): void {
     if (this.clienteForm.valid) {
       const clienteAdd: Cliente = {
-        id: this.generateRandomString(5),
+        id: this.clienteForm.value.id,
         nome: this.clienteForm.value.nome,
         telefone: this.clienteForm.value.telefone
       };
-
-      console.log(clienteAdd);
 
       this.clienteService.update(clienteAdd).subscribe();
       alert('Atualizado com sucesso!')

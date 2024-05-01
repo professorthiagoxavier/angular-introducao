@@ -13,9 +13,14 @@ export class FirstComponentComponent {
 name:string = "Thiago";
 age:number = 39;
 job = "Developer";  
-hobbies = ["Music", "Sports", "Movies"];
+//hobbies = ["Music", "Sports", "Movies"];
+hobbies=[];
 car = {make: "Ford", model: "Fiesta"};  
+//para exibir uma imagem busque uma imagem na web e salve dentro da pasta assets
+imageUrl = '../../assets/angular.png'
+mes= 1;
 
+isDisabled = false;
 
   constructor() {
 

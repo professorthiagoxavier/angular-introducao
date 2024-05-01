@@ -7,11 +7,70 @@
 <p>Modelo: {{car.model}}</p>
 <p>Hobbie: {{hobbies[1]}}</p>
 
+
+<h2>Interpolar imagem</h2>
+<img src="{{imageUrl}}" alt="Imagem Angular">
+
+
+<h2>Diretiva NgFor Angular 16 ou menor</h2>
 <ul class="ingredient-list">
     <li *ngFor="let hobbie of hobbies">{{ hobbie }}</li>
 </ul>
 
+<h2>Diretiva For Angular 17</h2>
+<ul class="ingredient-list">
+    @for (hobbie of hobbies; track $index) {
+        <li>{{ hobbie }}</li>
+    }
+</ul>
+
+<h2>Diretiva For Angular 17</h2>
+<ul class="ingredient-list">
+    @for (hobbie of hobbies; track $index) {
+        <li>{{ hobbie }}</li>
+    } @empty {
+        <li> Não há itens</li>
+    }
+</ul>
+
+<div *ngIf="hobbies.length > 0; else listaVazia">
+  <p> A lista tem {{ hobbies.length }} itens</p>
+</div>
+
+
+<ng-template #listaVazia>
+  <p>A lista está vazia!</p>
+</ng-template>
+
+
+@if (hobbies.length > 0) {
+  A lista tem {{ hobbies.length }} itens
+} @else {
+  A lista está vazia!
+}
+
+@switch (mes) {
+    @case (1) {
+       <p>Janeiro</p>
+    }
+    @case (2) {
+        <p>Fevereiro</p>
+    }
+    @case (3) {
+        <p>Março</p>
+    }
+    @default {
+        <p>Mês não encontrado</p>
+    }
+}
 
 <hr>
+<h2>Property binding</h2>
+
+<img [src]="imageUrl" alt="Imagem Angular">
+
+<input type="button" value="Click me" [disabled]="isDisabled">
+
+
 <h2> Inserindo component </h2>
 <app-into-component [name]="name" [car]="car"></app-into-component>
